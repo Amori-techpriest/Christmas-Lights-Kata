@@ -9,7 +9,18 @@
  */
 
 package com.example.project;
+
+
 	public class ChristmasLights{
+		//private int rows = 1000;
+		//private int columns = 1000;
+		private int totalLightsOn = 0;
+		//private boolean Lights [][] = new boolean [rows][columns];
+		public int TurnOnAllLights(){
+			totalLightsOn = 1000000;
+			return totalLightsOn;
+		}
+
 
 	}
 
