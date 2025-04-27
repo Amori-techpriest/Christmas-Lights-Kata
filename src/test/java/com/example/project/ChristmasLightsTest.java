@@ -32,7 +32,7 @@ class ChristmasLightsTests {
 	}
 	void TurnOnFirstHalfOfLights(){
 		ChristmasLights christmasLights = new ChristmasLights();
-		assertEquals(500000, christmasLights.TurnOnFirstHalfOfLights(),
+		assertEquals(500000, christmasLights.TurnOnFirstHalfOfLights(0, 0, 499, 999),
 		"turns on first half of lights");
 	}
 	
