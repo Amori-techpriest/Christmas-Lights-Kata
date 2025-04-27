@@ -29,7 +29,10 @@ package com.example.project;
 			}
 			return totalLightsOn;
 		}
-
+		public int ToggleFirstOneThousandLights(){
+			totalLightsOn = 1000;
+			return totalLightsOn;
+		}
 
 	}
 
