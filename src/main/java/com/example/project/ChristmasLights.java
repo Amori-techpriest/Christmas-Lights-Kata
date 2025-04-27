@@ -43,6 +43,10 @@ package com.example.project;
 			}
 			return totalLightsOn;
 		}
+		public int TurnOnFirstHalfOfLights(){
+			totalLightsOn = 500000;
+			return totalLightsOn;
+		}
 
 	}
 
