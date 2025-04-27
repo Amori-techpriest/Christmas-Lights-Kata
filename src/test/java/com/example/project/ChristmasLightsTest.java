@@ -19,10 +19,16 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class ChristmasLightsTests {
 	@Test
-	public void TurnOnAllLightsTest(){
+	void TurnOnAllLightsTest(){
 		ChristmasLights christmasLights = new ChristmasLights();
 		assertEquals(1000000, christmasLights.TurnOnAllLights(), 
 		"turns on all lights");
+	}
+	@Test 
+	void ToggleFirstOneThousandLights(){
+		ChristmasLights christmasLights = new ChristmasLights();
+		assertEquals(1000, christmasLights.ToggleFirstOneThousandLights(0, 0, 999, 0), 
+		"toggles first 1000 lights");
 	}
 	
 }
