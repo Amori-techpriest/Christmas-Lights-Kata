@@ -15,13 +15,13 @@ package com.example.project;
 		private int rows = 1000;
 		private int columns = 1000;
 		private int totalLightsOn = 0;
-		private boolean Lights [][] = new boolean [rows][columns];
+		private boolean lights [][] = new boolean [rows][columns];
 		public int TurnOnAllLights(){
 			if (totalLightsOn < 1000000){
 				for(int rowCounter = 0; rowCounter < rows; rowCounter++){
 					for(int columnCounter = 0; columnCounter < columns; columnCounter++){
-						if (!Lights[rowCounter][columnCounter]){
-							Lights[rowCounter][columnCounter] = true;
+						if (!lights[rowCounter][columnCounter]){
+							lights[rowCounter][columnCounter] = true;
 							totalLightsOn++;
 						}
 					}
@@ -29,8 +29,18 @@ package com.example.project;
 			}
 			return totalLightsOn;
 		}
-		public int ToggleFirstOneThousandLights(){
-			totalLightsOn = 1000;
+		public int ToggleFirstOneThousandLights(int startRows, int startColumns, int endRows, int endColumns){
+			for(int rowCounter = startRows; rowCounter <= endRows; rowCounter++){
+				for(int columnCounter = startColumns; columnCounter <= endColumns; columnCounter++) {
+					if(lights[rowCounter][columnCounter]){
+						totalLightsOn--;
+					}
+					else{
+						totalLightsOn++;
+					}
+					lights[rowCounter][columnCounter] = !lights[rowCounter][columnCounter];
+				}
+			}
 			return totalLightsOn;
 		}
 
