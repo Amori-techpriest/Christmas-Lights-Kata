@@ -43,8 +43,16 @@ package com.example.project;
 			}
 			return totalLightsOn;
 		}
-		public int TurnOnFirstHalfOfLights(){
-			totalLightsOn = 500000;
+		public int TurnOnFirstHalfOfLights(int startRows, int startColumns, int endRows, int endColumns){
+			for(int rowCounter = startRows; rowCounter <= endRows; rowCounter++){
+				for(int columnCounter = startColumns; columnCounter <= endColumns; columnCounter++){
+					if (!lights[rowCounter][columnCounter]) {
+							lights[rowCounter][columnCounter] = true;
+							totalLightsOn++;	
+					}
+				}
+
+			}
 			return totalLightsOn;
 		}
 
