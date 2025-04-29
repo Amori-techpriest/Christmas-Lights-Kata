@@ -35,5 +35,12 @@ class ChristmasLightsTests {
 		assertEquals(500000, christmasLights.TurnOnFirstHalfOfLights(0, 0, 499, 999),
 		"turns on first half of lights");
 	}
-	
+	@Test
+    public void TestOutOfArrayException() throws Exception {
+        ChristmasLights christmasLights = new ChristmasLights();
+        assertThrows(ChristmasLights.OutOfArrayExeption.class, 
+            () -> {christmasLights.TurnonFirstHalfofLights(0,0,1500,1200);},
+            "Turn on lights out of array bounds should throw exception" 
+            );
+    }
 }
